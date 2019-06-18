@@ -13,7 +13,7 @@
 		B8297A5E22B6ACE1006A0599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8297A5D22B6ACE1006A0599 /* Assets.xcassets */; };
 		B8297A6122B6ACE1006A0599 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8297A5F22B6ACE1006A0599 /* LaunchScreen.storyboard */; };
 		B8297A6922B6C458006A0599 /* OnboardingPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8297A6822B6C458006A0599 /* OnboardingPageCell.swift */; };
-		B8A5DFC822B6EED0005F774F /* PageIndicator__.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A5DFC722B6EED0005F774F /* PageIndicator__.swift */; };
+		B8A5DFC822B6EED0005F774F /* PageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A5DFC722B6EED0005F774F /* PageIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		B8297A6022B6ACE1006A0599 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8297A6222B6ACE1006A0599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8297A6822B6C458006A0599 /* OnboardingPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageCell.swift; sourceTree = "<group>"; };
-		B8A5DFC722B6EED0005F774F /* PageIndicator__.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIndicator__.swift; sourceTree = "<group>"; };
+		B8A5DFC722B6EED0005F774F /* PageIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 				B8297A5822B6ACDF006A0599 /* Onboarding.swift */,
 				B8297A6822B6C458006A0599 /* OnboardingPageCell.swift */,
 				B8297A5A22B6ACDF006A0599 /* Main.storyboard */,
-				B8A5DFC722B6EED0005F774F /* PageIndicator__.swift */,
+				B8A5DFC722B6EED0005F774F /* PageIndicator.swift */,
 				B8297A5D22B6ACE1006A0599 /* Assets.xcassets */,
 				B8297A5F22B6ACE1006A0599 /* LaunchScreen.storyboard */,
 				B8297A6222B6ACE1006A0599 /* Info.plist */,
@@ -141,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8A5DFC822B6EED0005F774F /* PageIndicator__.swift in Sources */,
+				B8A5DFC822B6EED0005F774F /* PageIndicator.swift in Sources */,
 				B8297A5922B6ACDF006A0599 /* Onboarding.swift in Sources */,
 				B8297A5722B6ACDF006A0599 /* AppDelegate.swift in Sources */,
 				B8297A6922B6C458006A0599 /* OnboardingPageCell.swift in Sources */,

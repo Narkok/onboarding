@@ -67,7 +67,7 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbp-dC-2bh">
-                                                    <rect key="frame" x="8" y="333.66666666666669" width="359" height="93.333333333333314"/>
+                                                    <rect key="frame" x="167.66666666666666" y="333.66666666666669" width="40" height="93.333333333333314"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <color key="textColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -81,18 +81,18 @@
                                             <constraint firstItem="jNt-eN-FWZ" firstAttribute="trailing" secondItem="EZa-Et-aXS" secondAttribute="trailingMargin" id="37E-c5-Faa"/>
                                             <constraint firstItem="u5S-Y9-Pdv" firstAttribute="trailing" secondItem="EZa-Et-aXS" secondAttribute="trailingMargin" id="9SM-TT-FxA"/>
                                             <constraint firstItem="u5S-Y9-Pdv" firstAttribute="top" secondItem="EZa-Et-aXS" secondAttribute="top" constant="20" id="BAt-N0-Bau"/>
-                                            <constraint firstItem="Rbp-dC-2bh" firstAttribute="trailing" secondItem="EZa-Et-aXS" secondAttribute="trailingMargin" id="Bei-om-KE8"/>
+                                            <constraint firstItem="Rbp-dC-2bh" firstAttribute="centerX" secondItem="EZa-Et-aXS" secondAttribute="centerX" id="Fgy-5t-hmN"/>
                                             <constraint firstItem="u5S-Y9-Pdv" firstAttribute="height" secondItem="EZa-Et-aXS" secondAttribute="height" multiplier="0.5" id="R59-dL-vlF"/>
                                             <constraint firstItem="u5S-Y9-Pdv" firstAttribute="leading" secondItem="EZa-Et-aXS" secondAttribute="leadingMargin" id="aiE-cx-euE"/>
                                             <constraint firstItem="jNt-eN-FWZ" firstAttribute="top" secondItem="Rbp-dC-2bh" secondAttribute="bottom" constant="-14" id="ap1-tJ-WXy"/>
                                             <constraint firstItem="jNt-eN-FWZ" firstAttribute="leading" secondItem="EZa-Et-aXS" secondAttribute="leadingMargin" id="c8l-xm-4yD"/>
-                                            <constraint firstItem="Rbp-dC-2bh" firstAttribute="leading" secondItem="EZa-Et-aXS" secondAttribute="leadingMargin" id="d2A-Cr-eSb"/>
                                             <constraint firstItem="Rbp-dC-2bh" firstAttribute="top" secondItem="u5S-Y9-Pdv" secondAttribute="bottom" constant="2" id="sf4-zK-Cmv"/>
                                             <constraint firstItem="Rbp-dC-2bh" firstAttribute="height" secondItem="EZa-Et-aXS" secondAttribute="height" multiplier="0.15" id="vHV-4U-DCZ"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="descriptionText" destination="jNt-eN-FWZ" id="9Ui-gv-Zll"/>
                                             <outlet property="imageView" destination="u5S-Y9-Pdv" id="EqY-xk-GQf"/>
+                                            <outlet property="titleCenterConstraint" destination="Fgy-5t-hmN" id="Xki-Hs-9DX"/>
                                             <outlet property="titleLabel" destination="Rbp-dC-2bh" id="RcV-k7-ykN"/>
                                         </connections>
                                     </collectionViewCell>
@@ -115,6 +115,9 @@
                                         <state key="normal" title="Дальше">
                                             <color key="titleColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FdT-Sz-THz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.83921568627450982" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -130,19 +133,23 @@
                                 <state key="normal" title="Пропустить">
                                     <color key="titleColor" red="0.37647058823529411" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="skipButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k70-lS-9xe"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDG-IA-fVn" customClass="PageIndicator__" customModule="onboarding" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDG-IA-fVn" customClass="PageIndicator" customModule="onboarding" customModuleProvider="target">
                                 <rect key="frame" x="165" y="678" width="45" height="5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="6pw-XC-vpH"/>
                                     <constraint firstAttribute="height" constant="5" id="LwK-gS-xew"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="_color">
-                                        <color key="value" red="0.23137254901960785" green="0.047058823529411764" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_tintColor">
+                                        <color key="value" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="_color2">
-                                        <color key="value" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_currentPage">
+                                        <color key="value" red="0.23137254900000001" green="0.047058823530000002" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -168,12 +175,40 @@
                     <connections>
                         <outlet property="nextButton" destination="b8J-VC-vlc" id="g9g-xz-fng"/>
                         <outlet property="onboardingPages" destination="12I-Ch-vwU" id="zJI-vS-FjA"/>
+                        <outlet property="pageIndicator" destination="RDG-IA-fVn" id="2Tk-ON-BLk"/>
                         <outlet property="skipButton" destination="Sm0-bi-FnZ" id="p3f-Sc-Lqc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.17733990147784"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KZ1-eK-nAI">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rLQ-sS-kKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="naB-8H-SHa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="23b-LP-0MD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LjX-ob-eJt">
+                                <rect key="frame" x="158" y="395.66666666666669" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LjX-ob-eJt" firstAttribute="centerY" secondItem="23b-LP-0MD" secondAttribute="centerY" id="6TR-ni-tVj"/>
+                            <constraint firstItem="LjX-ob-eJt" firstAttribute="centerX" secondItem="23b-LP-0MD" secondAttribute="centerX" id="XId-JK-nGe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C3j-7c-dfZ"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="894" y="138"/>
         </scene>
     </scenes>
 </document>

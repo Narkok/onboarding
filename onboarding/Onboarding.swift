@@ -13,7 +13,7 @@ class Onboarding: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var onboardingPages: UICollectionView!
     @IBOutlet weak var skipButton: UIButton!
-    
+    @IBOutlet weak var pageIndicator: PageIndicator!
     
     let titles = ["Выберите ресторан", "Статус заказа", "Скидки и промокоды"]
     let descriptoins = [
@@ -23,16 +23,21 @@ class Onboarding: UIViewController {
     ]
     var pages: [OnboardingPageCell] = []
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         nextButton.layer.shadowColor = nextButton.backgroundColor?.cgColor
         nextButton.layer.shadowRadius = 8
         nextButton.layer.shadowOpacity = 0.5
         nextButton.layer.shadowOffset = CGSize(width: 0, height: 2)
-    
     }
+
+    
+    @IBAction func skipButton(_ sender: Any) {
+    }
+    
+    @IBAction func nextButton(_ sender: Any) {
+    }
+    
 }
 
 
@@ -58,11 +63,12 @@ extension Onboarding: UICollectionViewDelegateFlowLayout {
 
 extension Onboarding: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let offset = scrollView.contentOffset.x
-//        let width = scrollView.bounds.width
-//        print(width)
-//        print(Int(offset / width))
-//        print(offset - width * CGFloat(Int(offset / width)))
-//        print()
+        
+        for indexPath in onboardingPages.indexPathsForVisibleItems {
+            let cell = onboardingPages.cellForItem(at: indexPath) as! OnboardingPageCell
+            cell.setOffset(offset: (CGFloat(indexPath.row) * onboardingPages.bounds.width - scrollView.contentOffset.x) / 8)
+        }
+        
+        pageIndicator.setScroll(width: scrollView.bounds.width, offset: scrollView.contentOffset.x)
     }
 }
