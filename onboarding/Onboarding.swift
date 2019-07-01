@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  onboarding
-//
-//  Created by Narek Stepanyan on 16/06/2019.
-//  Copyright © 2019 NRKK dev.studio. All rights reserved.
-//
-
 import UIKit
 
 class Onboarding: UIViewController {
@@ -15,11 +7,11 @@ class Onboarding: UIViewController {
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var pageIndicator: PageIndicator!
     
-    let titles = ["Выберите ресторан", "Статус заказа", "Скидки и промокоды"]
+    let titles = ["Web development", "Design", "Complementary services"]
     let descriptoins = [
-        "Вводите адрес доставки, выбирайте \nдоступный ресторан в своей зоне \nобслуживания и заказывайте еду. \nДоставим бесплатно в течение 30 минут!",
-        "Мы покажем статус вашего заказа \nв личном кабинете. \nОтслеживайте еду на карте \nв реальном времени.",
-        "Получайте бонусы \nи проверяйте вкладку промокоды. \nЗаглядывайте чаще — мы будем вас радовать 🙂"
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget eros sed felis mollis iaculis.",
+        "Vivamus dignissim posuere consectetur. Morbi diam mauris, semper sit.",
+        "Etiam eget tempus orci. Mauris et diam id velit feugiat venenatis in ut diam."
     ]
     var pages: [OnboardingPageCell] = []
     
@@ -27,8 +19,8 @@ class Onboarding: UIViewController {
         super.viewDidLoad()
         nextButton.layer.shadowColor = nextButton.backgroundColor?.cgColor
         nextButton.layer.shadowRadius = 8
-        nextButton.layer.shadowOpacity = 0.5
-        nextButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+        nextButton.layer.shadowOpacity = 0.2
+        nextButton.layer.shadowOffset = CGSize(width: 0, height: 0)
     }
 
     

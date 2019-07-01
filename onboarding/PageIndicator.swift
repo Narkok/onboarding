@@ -46,16 +46,13 @@ class PageIndicator: UIView {
         
         setScroll(width: frame.width, offset: 0)
     }
-    
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//
-//        print("lol")
-//
-//    }
+
     
     func setScroll(width: CGFloat, offset: CGFloat) {
         if (offset < 0) || (offset >= 2 * width) { return }
+        
+//        tintClr = _tintColor.cgColor.components!
+//        currClr = _currentPage.cgColor.components!
         
         let pageNum = Int(offset / width)
         let rel = (offset - width * CGFloat(Int(offset / width))) / width
